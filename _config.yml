@@ -1,10 +1,14 @@
 ---
-name: Foo Company
+title: Beardlesshq.Github.Io
 timezone: Europe/Stockholm
 collections:
   posts:
     title: Posts
     output: true
+  uploads:
+    title: Uploads
+    output: true
+name: Foo Company
 email: hello@example.com
 description: Short description
 url: https://jekyll.example.com
