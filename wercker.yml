@@ -15,11 +15,12 @@ build:
         name: jekyll - generating site
         code: |
           bundle exec jekyll build -d $WERCKER_OUTPUT_DIR
-deploy:
-  production:
-  - s3sync:
-      delete-removed: true
-      bucket-url: $AWS_BUCKET_URL
-      key-id: $AWS_ACCESS_KEY_ID
-      key-secret: $AWS_SECRET_ACCESS_KEY
-      opts: --cf-invalidate
+
+production:
+  steps:
+    - s3sync:
+        delete-removed: true
+        bucket-url: $AWS_BUCKET_URL
+        key-id: $AWS_ACCESS_KEY_ID
+        key-secret: $AWS_SECRET_ACCESS_KEY
+        opts: --cf-invalidate
