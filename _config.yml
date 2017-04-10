@@ -23,6 +23,7 @@ exclude:
 - scss
 - ".gitignore"
 - ".rbenv-vars"
+- wercker.yml
 sass:
   sass_dir: _scss
   style: compressed

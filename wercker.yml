@@ -1,0 +1,25 @@
+box: ruby:2.4.1
+
+build:
+  steps:
+    - install-packages:
+      packages: curl git
+    - script:
+      name: Set UTF-8 lang
+      code: export LANG=C.UTF-8
+    - script:
+      name: bundle - nokogiri use system libraries
+      code: bundle config build.nokogiri --use-system-libraries
+    - bundle-install
+    - script:
+        name: jekyll - generating site
+        code: |
+          bundle exec jekyll build -d $WERCKER_OUTPUT_DIR
+deploy:
+  production:
+  - s3sync:
+      delete-removed: true
+      bucket-url: $AWS_BUCKET_URL
+      key-id: $AWS_ACCESS_KEY_ID
+      key-secret: $AWS_SECRET_ACCESS_KEY
+      opts: --cf-invalidate
