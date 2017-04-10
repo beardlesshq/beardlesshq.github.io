@@ -20,10 +20,3 @@
         }
     }
 }());
-
-// Init Materialize javascripts
-(function($){
-  $(function(){
-    $('.button-collapse').sideNav();
-  });
-})(jQuery);

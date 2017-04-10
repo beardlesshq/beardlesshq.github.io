@@ -1,7 +1,6 @@
 ---
-title: Page Title
+title: Beardless - Technology & Marketing Solutions
+description: Technology Advisory - Stockholm - London - Berlin
 position: 0
-description: Page Description
 layout: default
 ---
-
