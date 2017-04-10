@@ -8,12 +8,13 @@ collections:
   uploads:
     title: Uploads
     output: true
-name: Foo Company
-email: hello@example.com
-description: Short description
-url: https://jekyll.example.com
-twitter_username: twitter_user
-github_org: github_org
+name: Beardless - Technology & Marketing Solutions
+email: hello@beardless.io
+description: Beardless AB provides marketing and technology solutions backed by modern
+  processes and state of the art tools.
+url: https://beardless.io
+twitter_username: beardlesshq
+github_org: beardlesshq
 markdown: kramdown
 exclude:
 - README.md
