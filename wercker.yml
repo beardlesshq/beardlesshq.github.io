@@ -15,6 +15,10 @@ build:
         name: jekyll - generating site
         code: |
           bundle exec jekyll build -d $WERCKER_OUTPUT_DIR
+    - script:
+        name: html-proofer
+        code: |
+          bundle exec htmlproofer $WERCKER_OUTPUT_DIR
 
 production:
   steps:
