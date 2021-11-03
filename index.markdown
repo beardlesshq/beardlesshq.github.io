@@ -1,5 +1,5 @@
 ---
-title: Beardless - Technology, Marketing and Cloud Infrastructure Solutions
+title: Beardless
 position: 0
 description: Technology Advisory - Stockholm - London - Berlin
 layout: default
