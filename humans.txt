@@ -2,13 +2,12 @@
 
 # TEAM
 
-    Martin Holmin -- Lead Developer -- @martinholmin
+  Martin Holmin -- Lead Developer -- @martinholmin
 
 # THANKS
 
   Steve Jobs
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY
 
-    CSS3, HTML5
-    Materialize CSS, jQuery, Modernizr, Normalize.css
+  HTML

@@ -1,1 +1,1 @@
-# Beardless AB Corporate Site
+# Beardless Corporate Site
