@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#060604">
   <title>{{ .Site.Title }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta property="og:title" content="{{ .Site.Title }}">
@@ -10,10 +11,10 @@
   <meta property="og:url" content="{{ .Site.BaseURL }}">
   <meta property="og:type" content="website">
   <link rel="canonical" href="{{ .Site.BaseURL }}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='78' x='18' font-size='86' font-family='Georgia,serif' fill='%23e8e4df'>B</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='78' x='22' font-size='80' font-family='system-ui,sans-serif' font-weight='700' fill='%23e8e4df'>b</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=DM+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       margin: 0;
@@ -25,13 +26,13 @@
       --bg: #0a0a08;
       --fg: #e8e4df;
       --muted: #5a5550;
-      --accent: #c4a882;
     }
 
     body {
-      background: radial-gradient(ellipse at center, #0d0d0b 0%, #060604 100%);
+      background: var(--bg);
       color: var(--fg);
       min-height: 100dvh;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -43,63 +44,51 @@
     main {
       text-align: center;
       padding: 2rem;
-      animation: arrive 1.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: arrive 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
     h1 {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
-      font-weight: 300;
-      font-size: clamp(2.4rem, 8vw, 4.8rem);
-      text-transform: uppercase;
-      letter-spacing: 0.28em;
-      padding-right: 0.28em;
+      font-family: 'Syne', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      letter-spacing: 0.08em;
       line-height: 1;
+      text-transform: lowercase;
     }
 
-    .rule {
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--muted);
-      margin: 2rem auto;
-      border: none;
-      opacity: 0.6;
-    }
-
-    .location {
+    .details {
+      margin-top: 1.6rem;
       font-size: 0.7rem;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.14em;
       color: var(--muted);
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      line-height: 2;
     }
 
     .email {
       display: inline-block;
       font-size: 0.7rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       color: var(--fg);
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: opacity 0.3s ease;
     }
 
     .email:hover {
-      color: var(--accent);
+      opacity: 0.6;
     }
 
     .focus {
       font-size: 0.6rem;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       color: var(--muted);
-      text-transform: uppercase;
-      margin-top: 2.4rem;
+      margin-top: 2rem;
       line-height: 1.8;
     }
 
     @keyframes arrive {
       from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(8px);
       }
       to {
         opacity: 1;
@@ -111,11 +100,10 @@
 
 <body>
   <main>
-    <h1>Beardless</h1>
-    <hr class="rule">
-    <p class="location">Stockholm — Sweden</p>
+    <h1>beardless hq</h1>
+    <p class="details">Stockholm — Sweden</p>
     <a class="email" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-    <p class="focus">AI · Digital Transformation · Digital Commerce · Product · DevOps</p>
+    <p class="focus">ai · digital transformation · digital commerce · product · devops</p>
   </main>
 </body>
 </html>
