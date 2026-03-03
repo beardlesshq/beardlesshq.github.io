@@ -1,0 +1,8 @@
+baseURL = 'https://beardless.io/'
+languageCode = 'en'
+title = 'Beardless'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Technology Advisory — Stockholm, Sweden'
+  email = 'hello@beardless.io'

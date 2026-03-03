@@ -10,4 +10,6 @@
 
 # TECHNOLOGY
 
+  Hugo
   HTML
+  CSS
